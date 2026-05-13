@@ -1,0 +1,81 @@
+{
+    "name": "monarc/monarc-backoffice",
+    "description": "Monarc back office application",
+    "authors": [
+        {
+            "name": "Cyril Rouyer",
+            "email": "cyril@netlor.fr"
+        },
+        {
+            "name": "Guillaume Lesniak",
+            "email": "guillaume@netlor.fr"
+        },
+        {
+            "name": "Jérôme De Almeida",
+            "email": "jerome.dealmeida@vesperiagroup.com"
+        },
+        {
+            "name": "Benjamin Ganivet",
+            "email": "benjamin@netlor.fr"
+        },
+        {
+            "name": "Thomas Metois",
+            "email": "thomas@netlor.fr"
+        },
+        {
+            "name": "Jérôme Lombardi",
+            "email": "jerome.lombardi@cases.lu"
+        },
+        {
+            "name": "Juan Rocha",
+            "email": "juan.rocha@cases.lu"
+        },
+        {
+            "name": "Cédric Bonhomme",
+            "email": "cedric.bonhomme@cases.lu"
+        },
+        {
+            "name": "Ruslan Baidan",
+            "email": "ruslan.baidan@cases.lu"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "ext-openssl": "*",
+        "laminas/laminas-mvc": "^3.1",
+        "laminas/laminas-di": "^3.1",
+        "laminas/laminas-permissions-rbac": "^3.0",
+        "laminas/laminas-log": "^2.11",
+        "laminas/laminas-i18n": "^2.9",
+        "laminas/laminas-dependency-plugin": "^2.0",
+        "laminas/laminas-mvc-middleware": "^2.2",
+        "endroid/qr-code": "^4.4",
+        "laminas/laminas-i18n-resources": "^2.9"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
+    "autoload": {
+        "psr-4": {
+            "Monarc\\Core\\": "vendor/monarc/core/src/",
+            "Monarc\\Backoffice\\": "vendor/monarc/backoffice/src/"
+        },
+        "classmap": [
+            "vendor/monarc/core/Module.php",
+            "vendor/monarc/backoffice/Module.php"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin/",
+        "platform": {
+            "php": "8.1.0"
+        },
+        "allow-plugins": {
+            "laminas/laminas-dependency-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
